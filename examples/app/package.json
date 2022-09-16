@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "pnpm esbuild src/** --bundle --outdir=www",
-    "dev": "pnpm build -- --watch",
+    "dev": "malita dev",
     "serve": "cd www && serve"
   },
   "keywords": [],
   "author": "",
   "dependencies": {
-    "malita": "workspace:*",
+    "@parligerly/malita": "workspace:*",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

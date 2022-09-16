@@ -31,7 +31,8 @@ program
   .command("dev")
   .description("框架开发命令")
   .action(function () {
-    require("../lib/dev");
+    const { dev } = require("../lib/dev");
+    dev();
   });
 
 program.parse(process.argv);

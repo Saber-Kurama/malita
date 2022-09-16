@@ -7,9 +7,8 @@
     "malita": "./bin/malita.js"
   },
   "scripts": {
-    "hello": "node src/index.js",
-    "build": "pnpm esbuild src/** --bundle --outdir=lib",
-    "dev": "pnpm build -- --watch",
+    "build": "pnpm esbuild src/** --bundle --outdir=lib --platform=node --external:esbuild",
+    "dev": "pnpm build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,7 +28,13 @@
   "dependencies": {
     "babel-standalone": "^6.26.0",
     "commander": "^9.4.0",
+    "esbuild": "^0.14.36",
+    "express": "^4.17.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.7.18"
   }
 }
