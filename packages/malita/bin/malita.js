@@ -1,14 +1,19 @@
 #!/usr/bin/env node
 
 const {
-    program
+    Command
 } = require('commander');
 
+
+const program = new Command();
+
 program
-  //   .version(require('../package.json').version, '-v, -V', '输出当前框架的版本')
-  //   .description('这是21天短文，挑战手写前端框架的产物框架')
-  // .usage('<command> [options]')
-  .command('help')
+    .version(require('../package.json').version, '-v, -V', '输出当前框架的版本')
+    .description('这是21天短文，挑战手写前端框架的产物框架')
+    .usage('<command> [options]')
+    .parse(process.argv);
+
+program.command('help')
     .alias('-h')
     .description('帮助命令')
     .action(function(name, other) {
@@ -21,5 +26,4 @@ program
 
 Example call:
     $ malita <command> --help`)
-    })
-    .parse(process.argv)
+    }).parse(process.argv);
