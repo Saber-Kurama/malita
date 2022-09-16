@@ -1,12 +1,22 @@
 {
-  "name": "app",
+  "name": "@examples/app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "@parligerly/malita": "workspace:*"
+  "scripts": {
+    "build": "pnpm esbuild src/** --bundle --outdir=www",
+    "dev": "pnpm build -- --watch",
+    "serve": "cd www && serve"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "malita": "workspace:*",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^13.0.2"
+  }
 }

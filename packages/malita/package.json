@@ -8,6 +8,8 @@
   },
   "scripts": {
     "hello": "node src/index.js",
+    "build": "pnpm esbuild src/** --bundle --outdir=lib",
+    "dev": "pnpm build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
